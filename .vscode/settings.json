@@ -1,13 +1,53 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "files.exclude": {
-        "out": false, // set this to true to hide the "out" folder with the compiled JS files
-        "dist": false // set this to true to hide the "dist" folder with the compiled JS files
-    },
-    "search.exclude": {
-        "out": true, // set this to false to include "out" folder in search results
-        "dist": true // set this to false to include "dist" folder in search results
-    },
-    // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
-    "typescript.tsc.autoDetect": "off"
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Editor
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Insert snippets when their prefix matches.
+  // Works best when 'quickSuggestions' aren't enabled.
+  "editor.tabCompletion": "on",
+  // Columns at which to show vertical rulers.
+  "editor.rulers": [128],
+
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Files
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Configure glob patterns for excluding files and folders.
+  "files.exclude": {
+    "**/node_modules/**": true,
+    "out": false, // set this to true to hide the "out" folder with the compiled JS files
+    "dist": false // set this to true to hide the "dist" folder with the compiled JS files
+  },
+
+  // Configure glob patterns of file paths to exclude from file watching.
+  // Changing this setting requires a restart. When you experience Code consuming
+  // lots of cpu time on startup, you can exclude large folders to reduce the initial load.
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "lib/**": true
+  },
+
+  // Specifies the folder path containing the tsserver and lib*.d.ts files to use.
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "search.exclude": {
+    "out": true, // set this to false to include "out" folder in search results
+    "dist": true // set this to false to include "dist" folder in search results
+  },
+  // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
+  "typescript.tsc.autoDetect": "off",
+
+  // ---------------------------------------------------------------------------------------------------------------------------
+  // Language Setings
+  // ---------------------------------------------------------------------------------------------------------------------------
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  }
 }
