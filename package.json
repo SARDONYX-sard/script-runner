@@ -31,32 +31,49 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
+    "watch": "npm run clean && webpack --watch --config ./config/webpack.dev.js",
+    "package": "npm run clean && webpack --config ./config/webpack.prod.js ",
     "test-compile": "tsc -p ./",
     "test-watch": "tsc -watch -p ./",
     "pretest": "npm run test-compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "clean": "rm -rf ./dist/js"
   },
   "devDependencies": {
+    "@types/chrome": "^0.0.154",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.2.2",
     "@types/node": "14.x",
+    "@types/react": "^17.0.17",
+    "@types/react-dom": "^17.0.9",
     "@types/vscode": "^1.59.0",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "css-loader": "^6.2.0",
     "eslint": "^7.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "glob": "^7.1.7",
     "mocha": "^8.4.0",
+    "node-sass": "^6.0.1",
     "prettier": "^2.3.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
     "ts-loader": "^9.2.2",
     "typescript": "^4.3.2",
     "vscode-test": "^1.5.2",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "immer": "^9.0.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-use": "^17.2.4",
+    "zustand": "^3.5.7"
   }
 }

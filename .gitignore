@@ -13,11 +13,13 @@
 .tmp
 .netbeans
 nbproject
-out
-dist
 node_modules
 .vscode-test/
 *.vsix
+
+# build files or dir
+out
+dist/js
 
 # ------------------------------------------------------------------------------------------------------------------------------
 # Dynamicaly Generated Files
