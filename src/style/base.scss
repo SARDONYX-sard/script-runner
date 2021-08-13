@@ -1,0 +1,19 @@
+@import "../style/variables";
+@import "../style/fontello-embedded.css";
+
+html {
+  height: 100%;
+}
+html,
+body {
+  background-color: $black;
+  color: $yellow;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 320px;
+  border: none;
+}
+
+#popup {
+}
