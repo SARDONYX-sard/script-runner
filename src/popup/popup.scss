@@ -1,0 +1,12 @@
+@import "../style/base.scss";
+
+@import "./component/Header.scss";
+@import "./component/Scripts.scss";
+
+.popup-footer {
+  text-align: right;
+  font-size: 10px;
+  padding: 10px 0 10px;
+  opacity: 0.8;
+  padding-right: 10px;
+}
