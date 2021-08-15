@@ -9,16 +9,12 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     popup: path.join(__dirname, "../src/popup/index.tsx"),
-    eventPage: path.join(__dirname, "../src/eventPage.ts"),
+    options: path.join(__dirname, "../src/options/index.tsx"),
   },
   output: {
     // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
     path: path.join(__dirname, "../dist/js"),
     filename: "[name].js",
-  },
-  externals: {
-    vscode: "commonjs vscode", // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
-    // modules added here also need to be added in the .vsceignore file
   },
   resolve: {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader

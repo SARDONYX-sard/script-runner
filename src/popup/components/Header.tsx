@@ -1,6 +1,5 @@
-import React from "react";
 import { useStore } from "../../store/PopupStore";
-import { openHTML } from "../../utils/tab";
+import { openHTML } from "../utils/tab";
 
 export const Header = (): JSX.Element => {
   const togglePower = useStore((state) => state.togglePower);

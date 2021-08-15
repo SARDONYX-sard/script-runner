@@ -1,5 +1,5 @@
 import { useStore } from "../../store/PopupStore";
-import { count, isExcludeHost, isMatch } from "../../utils/tab";
+import { count, isExcludeHost, isMatch } from "../utils/tab";
 
 import type { ScriptObj } from "../../types/popup";
 

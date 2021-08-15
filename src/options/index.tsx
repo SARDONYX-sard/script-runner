@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
-import Popup from "./Popup";
+import Options from "./Options";
 
 chrome.tabs.query({ active: true, currentWindow: true }, (_tab) => {
-  ReactDOM.render(<Popup />, document.getElementById("popup"));
+  ReactDOM.render(<Options />, document.getElementById("options"));
 });

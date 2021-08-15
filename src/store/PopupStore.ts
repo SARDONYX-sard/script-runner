@@ -53,9 +53,15 @@ export const useStore = create<State>((set, get) => ({
   /* Get the `data` from the chrome storage and set it to `state`. */
   load: () => {
     chrome.storage.sync.get(get().data, (items) => {
-      set({
-        data: items.data,
-      });
+      const data = items as StorageData | undefined;
+
+      if (data) {
+        set(
+          produce((state: State) => {
+            state.data = data;
+          }),
+        );
+      }
     });
   },
 }));

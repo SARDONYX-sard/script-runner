@@ -1,4 +1,4 @@
-import type { StorageData, UrlInfo } from "../types/popup";
+import type { StorageData, UrlInfo } from "../../types/popup";
 
 function getUrlInfo(): UrlInfo {
   let urlInfo: UrlInfo | undefined;
