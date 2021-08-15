@@ -7,7 +7,16 @@ export type StorageData = {
   };
 };
 
-export type ScriptObj = { host: string; enable: boolean; type: "external" | "snippet"; name: boolean };
+export type ScriptObj = {
+  [key: string]: any;
+  id: number;
+  enable: boolean;
+  name: string;
+  type: string;
+  src: string;
+  code: string;
+  host: string;
+};
 
 export type UrlInfo = {
   currentURL: any;
