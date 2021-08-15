@@ -7,16 +7,15 @@
     "default_icon": "icon/js-logo.png",
     "default_popup": "popup.html"
   },
-  "background": {
-    "scripts": [
-      "js/eventPage.js"
-    ],
-    "persistent": false
-  },
+  
   "icons": {
     "16": "icon/js-logo.png"
   },
+  "options_page": "options.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": [
+    "tabs",
+    "<all_urls>",
     "storage"
   ]
 }
